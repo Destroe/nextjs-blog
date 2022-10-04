@@ -2,7 +2,7 @@ import { useState } from "react"
 import React from "react"
 import Link from "next/link";
 
-export default function Header(className:any) {
+export default function HeaderGhost(className:any) {
   const [open, setOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
 
@@ -36,25 +36,11 @@ export default function Header(className:any) {
               <input className="block w-full py-2 pl-8 text-gray-900 bg-gray-200 border border-transparent rounded-lg sm:w-full focus:outline-none focus:bg-white focus:text-gray-900 lg:w-5/6 focus:border-gray-300" placeholder="Search by keywords" />
             </div>
           </div>
-          <div className="ml-4 xl:col-start-3 2xl:col-start-5 sm:flex sm:items-center">
+          <div className="ml-4 mr-8 xl:col-start-3 2xl:col-start-5 sm:flex sm:items-center">
             <div className='px-2 pt-2 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:px-0'>
-              <a href="#" className='block px-3 py-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 xl:text-gray-900'>List your property</a>
-              <a href="#" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-gray-900'>Trips</a>
-              <a href="#" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-gray-900'>Messages</a>
-            </div>
-            <div className='relative px-5 py-4 sm:py-0 sm:ml-4 sm:px-0'>
-              <div className='flex items-center sm:hidden'>
-                <img className='object-cover w-10 h-10 mt-1 rounded-full' src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=260&q=80" alt="" />
-                <span className='ml-4 font-semibold text-gray-200 sm:hidden'>Isla Schoger</span>
-              </div>
-              <button type="button" className="hidden sm:overflow-hidden sm:block sm:rounded-full sm:border-2 sm:border-gray-600" onClick={() => setProfileOpen(!profileOpen)}>
-                <img className='object-cover w-8 h-8 rounded-full' src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=260&q=80" alt="" />
-              </button>
-              <div className={(profileOpen ? "mt-5 sm:bg-white xl:bg-gray-800 sm:rounded-lg sm:absolute sm:right-0 sm:w-48 sm:mt-3 sm:py-2 sm:shadow-xl sm:block sm:z-50" : "sm:hidden")}>
-                <a href="#" className='block py-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4'>Account Settings</a>
-                <a href="#" className='block py-1 mt-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4 sm:mt-0'>Support</a>
-                <a href="#" className='block py-1 mt-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4 sm:mt-0'>Sign Out</a>
-              </div>
+              <a href="#" className='block px-3 py-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 xl:text-gray-900'>News</a>
+              <a href="#" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-gray-900'>Jobs</a>              
+              <a href="/registration" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-indigo-500'>Sign in</a>
             </div>
           </div>
         </div>

@@ -26,22 +26,23 @@ export default class UserController extends BaseController {
             )
     }
 
-    //     public createUser(req: NextApiRequest, res: NextApiResponse) {
-    //         return User.create({}).then(userss =>{
-    //             {
-    //                 id: id,
-    //                 first_name: first_name,
-    //                 email: email,
-    //                 password: password,
-    //                 role: role,
-    //                 register_data: register_data,
-    //                 timezone: timezone,
-    //                 createdAt: createdAt,
-    //                 updatedAt: updatedAt
-    //             }
-    //             res.json({data:"Users created"});
-    //             res.status(200).json({ userss });  
-    //         })
-    //     }
+    public createUser(req: NextApiRequest, res: NextApiResponse) {
+        const { id, firstName, email, password, role, register_data, timezone, createdAt, updatedAt } = req.body
+        return User.create({
+            id: id,
+            first_name: firstName,
+            email: email,
+            password: password,
+            role: role,
+            register_data: register_data,
+            timezone: timezone,
+            createdAt: createdAt,
+            updatedAt: updatedAt
+        })
+            .then(userss => {
+                res.json({ data: "Users created" });
+                res.status(200).json({ userss });
+            })
+    }
 
 }

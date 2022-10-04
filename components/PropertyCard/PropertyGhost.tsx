@@ -5,23 +5,21 @@ import useSWR from 'swr'
 
 
 const fetcher = (...args:any) => fetch(...args).then(res => res.json())
-function Property() { 
+function PropertyGhost() { 
 
 
     const { data, error } = useSWR('/api/property', fetcher)
     if (error) return <div>failed to load</div>
     if (!data) return <div>loading...</div>
     
-    
     function getRandomInt(min:any, max:any) {
         min = Math.ceil(min);
         max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+        return Math.floor(Math.random() * (max - min)) + min;
       }
     return(
        <div className="xl:grid xl:grid-cols-3 md:grid md:grid-cols-2">
         {data.properties.map((properties:any) =>(
-        <Link href={`/property/${(properties.id)}`}>  
         <div className='flex -mt-10 sm:py-6 sm:flex sm:-mx-2 sm:overflow-auto sm:pb-8 xl:mx-12 xl:pt-3'>
           <div className='mt-10 sm:max-w-xs sm:w-full sm:flex-shrink-0' key={properties}>
               <div className='relative sm:px-2 pb-5/6'>
@@ -52,11 +50,10 @@ function Property() {
                </div>
              </div>
         </div>
-        </Link>
         ))}
         </div>
     )
 }
     
 
-export default Property;
+export default PropertyGhost;
