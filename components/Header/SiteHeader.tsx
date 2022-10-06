@@ -53,7 +53,7 @@ export default function Header(className:any) {
               <div className={(profileOpen ? "mt-5 sm:bg-white xl:bg-gray-800 sm:rounded-lg sm:absolute sm:right-0 sm:w-48 sm:mt-3 sm:py-2 sm:shadow-xl sm:block sm:z-50" : "sm:hidden")}>
                 <a href="#" className='block py-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4'>Account Settings</a>
                 <a href="#" className='block py-1 mt-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4 sm:mt-0'>Support</a>
-                <a href="#" className='block py-1 mt-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4 sm:mt-0'>Sign Out</a>
+                <a href="../ghost" className='block py-1 mt-1 text-gray-400 no-underline hover:no-underline xl:text-white sm:hover:bg-indigo-500 sm:py-2 hover:text-white sm:text-gray-800 sm:px-4 sm:mt-0'>Sign Out</a>
               </div>
             </div>
           </div>

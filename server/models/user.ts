@@ -14,6 +14,14 @@ interface IUser extends Model {
     updatedAt: Date;
 }
 
+// async function hashPassword(user, options) {
+//     if (user.changed('password')) {
+//       const { password } = user
+//       const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS)
+//       user.password = hashedPassword
+//     }
+//   }
+
 const User = db.define('users', {
     id: {
         allowNull: false,
@@ -60,27 +68,20 @@ const User = db.define('users', {
     updatedAt: {
         type: DataTypes.BIGINT,
         allowNull: false
-    },   
+    },
+},
+{
+    hooks : {
+        beforeCreate : (User, options) => {
+            User.dataValues.createdAt = Math.floor(Date.now() / 1000);
+            User.dataValues.updatedAt = Math.floor(Date.now() / 1000);
+        },
+        beforeUpdate : (record, options) => {
+            User.dataValues.updatedAt = Math.floor(Date.now() / 1000);
+        }
+    }
 });
 
-// User.hasMany(Properties, {
-//     as: 'proper', 
-//     sourceKey: 'id', 
-//     foreignKey: 'owner_user_id' 
-// });
-
-//     User.associate = function(models:any) {
-
-// }
-    //     User.associate = (models:any) =>{
-    //     User.hasMany(models.Properties, { 
-    //         foreignKey: 'owner_user_id', 
-    //         onDelete: 'SET NULL' });
-    // }
 
 
-
-    // User.associate = models => {
-    //     User.hasMany(Properties, { as: 'properties', sourceKey: 'id', foreignKey: 'id', onDelete: 'SET NULL' });
-    // }
 export default User;

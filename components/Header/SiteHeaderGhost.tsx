@@ -40,7 +40,7 @@ export default function HeaderGhost(className:any) {
             <div className='px-2 pt-2 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:px-0'>
               <a href="#" className='block px-3 py-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 xl:text-gray-900'>News</a>
               <a href="#" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-gray-900'>Jobs</a>              
-              <a href="/registration" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-indigo-500'>Sign in</a>
+              <a href="/autefication/registration" className='block px-3 py-1 mt-1 font-semibold text-white rounded hover:no-underline sm:mt-2 xl:hover:bg-gray-400 hover:bg-gray-800 sm:text-sm sm:px-3 sm:ml-2 xl:text-indigo-500'>Sign in</a>
             </div>
           </div>
         </div>

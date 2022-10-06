@@ -11,7 +11,7 @@ const db = new Sequelize(
         dialect: 'mysql',
         dialectModule: mysql2,
         define: {
-        timestamps: false
+        timestamps: true
         }
     }
 );

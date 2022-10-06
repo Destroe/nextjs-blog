@@ -154,6 +154,7 @@ const Properties = db.define('properties', {
         type: DataTypes.BIGINT,
         allowNull: false
     },
+    
 });
 
 Properties.belongsTo(User, { as: 'owner', foreignKey: 'owner_user_id'});
